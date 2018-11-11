@@ -24,7 +24,7 @@ router.get('/', ensureAuthenticated, (req, res) => {
 });
 
 
-
+// get all places route
 router.get('/allPlaces', (req, res) => {
   if (req.query.search) {
     const regex = new RegExp(escapeRegex(req.query.search), 'gi');
