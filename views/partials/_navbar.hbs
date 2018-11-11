@@ -1,0 +1,73 @@
+<!-- nav bar starts here -->
+<div class="navbar-fixed">
+	<nav class="teal">
+		<div class="container">
+			<div class="nav-wrapper">
+				<a href="/" class="brand-logo">TravelGo</a>
+				<a href="#" data-target="mobile-nav" class="sidenav-trigger">
+					<i class="material-icons">menu</i>
+
+				</a>
+				<ul class="right hide-on-med-and-down">
+
+
+					<li>
+						<a href="/">Home</a>
+					</li>
+					<li>
+						<a href="#search">Search</a>
+					</li>
+					<li>
+						<a href="/places/allPlaces">Popular Places</a>
+					</li>
+					<li>
+						<a href="#gallery">Gallery</a>
+					</li>
+					<li>
+						<a href="#contact">Contact</a>
+					</li>
+					<li>
+						<a href="/admin/profile"> Profile</a>
+					</li>
+					{{#if user}}
+					<li><a href="/places"><i class="fas fa-user"></i> Places</a></li>
+					<li><a href="/places/add"><i class="fas fa-user"></i>Add Places</a></li>
+
+					<li><a href="/admin/logout"><i class="fas fa-user"></i> logout</a></li>
+
+					{{else}}
+					<li><a href="/admin/register"><i class="fas fa-user"></i> Register</a></li>
+					<li><a href="/admin/login"><i class="fas fa-user"></i>Login</a></li>
+
+					{{/if}}
+					{{!-- <li>
+						<a href="/admin/logout"><i class="fas fa-sign-in-alt"></i> Logout</a>
+					</li> --}}
+
+				</ul>
+			</div>
+		</div>
+
+	</nav>
+
+</div>
+<!-- navbar ends here -->
+
+
+<ul class="sidenav" id="mobile-nav">
+	<li>
+		<a href="#home">Home</a>
+	</li>
+	<li>
+		<a href="#search">Search</a>
+	</li>
+	<li>
+		<a href="#popular">Popular Places</a>
+	</li>
+	<li>
+		<a href="#gallery">Gallery</a>
+	</li>
+	<li>
+		<a href="#contact">Contact</a>
+	</li>
+</ul>

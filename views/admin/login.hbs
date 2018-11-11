@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="container white z-depth-2">
+	<ul class="tabs teal">
+		<li class="tab col s3"><a class="white-text active" href="#login">login</a></li>
+		<li class="tab col s3"><a class="white-text" href="#register">register</a></li>
+	</ul>
+	<div id="register" class="col s12">
+
+
+		<form action="/admin/login" method="post" class="col s12">
+			<div class="form-container">
+				<h3 class="teal-text">Login</h3>
+				
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="email" name="email" type="email" class="validate">
+						<label for="email">Email</label>
+					</div>
+				</div>
+	
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="password" name="password" type="password" class="validate">
+						<label for="password">Password</label>
+					</div>
+				</div>
+				<center>
+                    {{!-- <input type="hidden" name="_csrf" value=""> --}}
+					<button class="btn waves-effect waves-light teal" type="submit">Log In</button>
+				</center>
+			</div>
+		</form>
+	</div>
+</div>
+</div>

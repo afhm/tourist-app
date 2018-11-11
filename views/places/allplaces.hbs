@@ -1,0 +1,38 @@
+<!-- Section: Popular places starts here-->
+<section id="popular" class="section section-popular scrollspy">
+    <div class="container">
+        <div class="row">
+            <h4 class="center"><span class="teal-text">Popular</span> Places</h4>
+            {{#each places}}
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="/images/resort1.jpg">
+                        <span class="card-title">{{title}}</span>
+                    </div>
+                    <div class="card-content">
+                       {{desc}}
+                    </div>
+                    <div class="card-content">
+                        
+                         {{imagePath}}
+                        
+                    </div>
+                    <div class="card-action">
+                        <a href="/places/indplace/{{id}}"><button class="btn right waves-effect waves-light">Read More</button></a>
+
+                    </div>
+
+                </div>
+            </div>
+            {{else}}
+            <p> no places</p>
+            {{/each}}
+
+
+        </div>
+
+
+    </div>
+</section>
+<!-- Section: Popular places ends here-->

@@ -1,0 +1,31 @@
+{{#each errors}}
+<div><span class="badge red">{{text}}</span>
+</div>
+
+{{else}}
+{{/each}}
+
+<div class="row">
+    <form action="/places/{{place.id}}?_method=PUT" method="post" class="col s12">
+    <input type="hidden" name="_method" value="PUT">
+        <div class="row">
+            <h4 class="center"><span class="teal-text">Edit</span> place</h4>
+            <div class="input-field col s6">
+
+                <input name="title" id="input_text" type="text" data-length="10" required value="{{place.title}}">
+                <label for="input_text">Location Title</label>
+            </div>
+            <div class="input-field col s6">
+                <input name="desc" id="input_text" type="text" data-length="10" required value="{{place.description}}">
+                <label for="input_text">Location Description</label>
+            </div>
+            <div class="input-field col s6">
+                <input name="imagePath" id="input_text" type="text" data-length="10" required value="{{place.imagePath}}">
+                <label for="input_text">Location Description</label>
+            </div>
+        </div>
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+
+        </button>
+    </form>
+</div>

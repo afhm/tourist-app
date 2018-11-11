@@ -1,0 +1,13 @@
+{{#if error}}
+<div><span class="badge red">{{error}}</span>
+</div>
+
+{{/if}}
+
+
+{{#each errors}}
+<div><span class="badge red">{{text}}</span>
+</div>
+
+{{else}}
+{{/each}}
