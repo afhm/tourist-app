@@ -9,8 +9,10 @@ just a basic crud app made in nodejs and mongodb using handlebars as template en
 npm install
 ```
 
-## Usage example
-
+## Start the Server
+```sh
+npm start
+```
 
 ## Development setup
 
