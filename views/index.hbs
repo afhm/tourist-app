@@ -1,4 +1,13 @@
 <!--Section: slider starts here -->
+<div class="row"> {{#if hasErrors}}
+    <div><span class="new badge red">
+
+            {{# each messages }}
+            <h3>{{this}}</h3>
+            {{/each}}
+        </span>
+    </div>
+    {{/if}}</div>
 <section class="slider">
     <ul class="slides">
         <li>
@@ -113,16 +122,16 @@
             <div class="col s12 m6">
                 <div class="card-panel grey lighten-2">
                     <h5>Please fill out this form</h5>
-                    
+
                     <form action="/contact" method="post" class="col s12">
                         <div class="input-field">
-                            <input type="text" value="{{name}}"  name="name" placeholder="Name">
+                            <input type="text" value="{{name}}" name="name" placeholder="Name">
                         </div>
                         <div class="input-field">
                             <input type="text" name="email" value="{{email}}" placeholder="Email" type="email" class="validate">
                         </div>
                         <div class="input-field">
-                            <input type="text" name="phone" value="{{phone}}"  placeholder="Phone">
+                            <input type="text" name="phone" value="{{phone}}" placeholder="Phone">
                         </div>
                         <div class="input-field">
                             <input value="" name="message" value="{{message}}" type="text">
