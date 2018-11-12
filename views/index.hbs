@@ -87,3 +87,57 @@
     </div>
 </section>
 <!-- Section: Icon Boxes ends here-->
+
+<!-- Seciton: Contact Area starts here -->
+<section id="contact" class="section section-contact scrollspy">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card-panel teal white-text center">
+                    <i class="material-icons">email</i>
+                    <h5>Contact us for Booking</h5>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    </p>
+                </div>
+                <ul class="collection with-header">
+                    <li class="collection-header">
+                        <h4>Location</h4>
+                    </li>
+                    <li class="collection-item">TravelGo Agency</li>
+                    <li class="collection-item">555 Beach Rd, Suite 33</li>
+                    <li class="collection-item">Miami, FL 55555</li>
+                </ul>
+            </div>
+            <div class="col s12 m6">
+                <div class="card-panel grey lighten-2">
+                    <h5>Please fill out this form</h5>
+                    
+                    <form action="/contact" method="post" class="col s12">
+                        <div class="input-field">
+                            <input type="text" value="{{name}}"  name="name" placeholder="Name">
+                        </div>
+                        <div class="input-field">
+                            <input type="text" name="email" value="{{email}}" placeholder="Email" type="email" class="validate">
+                        </div>
+                        <div class="input-field">
+                            <input type="text" name="phone" value="{{phone}}"  placeholder="Phone">
+                        </div>
+                        <div class="input-field">
+                            <input value="" name="message" value="{{message}}" type="text">
+                        </div>
+                        <input type="submit" value="submit" class="btn">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Seciton: Contact Area ends here -->
+
+<!-- Section: Footer starts here -->
+<footer class="section teal darken-2 white-text center">
+    <p class="flow-text"> TravelGo &copy; 2018</p>
+</footer>
+<!-- Section: Footer ends here -->

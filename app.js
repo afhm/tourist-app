@@ -11,7 +11,6 @@ var bodyParser = require('body-parser');
 
 var path = require('path');
 var cookieParser = require('cookie-parser');
-var logger = require('morgan');
 var  passport = require('passport');
 
 var usersRouter = require('./routes/admin');
@@ -19,6 +18,8 @@ var app = express();
 //load routes
 var places = require('./routes/places');
 var admin = require('./routes/admin');
+var contacts = require('./routes/contact');
+var adminprofile = require('./routes/adminprofile');
 
 //passport config
 
@@ -37,7 +38,6 @@ app.engine('.hbs', exphbs({
 }));
 app.set('view engine', '.hbs');
 
-app.use(logger('dev'));
 
 // add body parser middle ware
 // parse application/x-www-form-urlencoded
@@ -54,6 +54,7 @@ app.use(session({
   resave: true,
   saveUninitialized: true
 }));
+
 //passport middleware 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -69,7 +70,8 @@ app.use((req,res,next) => {
   res.locals.user = req.user || null;
   next();
 });
-//homee route
+
+//home route
 app.get('/', (req, res) => {
   res.render('index');
 });
@@ -97,6 +99,8 @@ mongoose.connect('mongodb://localhost:27017/tourist', {
 //use external routes
 app.use('/admin', admin);
 app.use('/places', places);
+app.use('/contact', contacts);
+app.use('/adminprofile', adminprofile);
 
 // // catch 404 and forward to error handler
 // app.use(function (req, res, next) {
