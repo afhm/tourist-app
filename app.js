@@ -1,4 +1,4 @@
-var createError = require('http-errors');
+// var createError = require('http-errors');
 var express = require('express');
 var exphbs = require('express-handlebars');
 var methodOverride = require('method-override');
@@ -10,10 +10,8 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 
 var path = require('path');
-var cookieParser = require('cookie-parser');
 var  passport = require('passport');
 
-var usersRouter = require('./routes/admin');
 var app = express();
 //load routes
 var places = require('./routes/places');
@@ -71,18 +69,15 @@ app.use((req,res,next) => {
   next();
 });
 
-//home route
+// home route
 app.get('/', (req, res) => {
-  res.render('index');
+  res.redirect('places/allplaces');
 });
 
 // app.use(express.json());
 // app.use(express.urlencoded({
 //   extended: false
 // }));
-
-
-app.use(cookieParser());
 
 //for static assets public folder
 app.use(express.static(path.join(__dirname, 'public')));
@@ -97,6 +92,7 @@ mongoose.connect('mongodb://localhost:27017/tourist', {
 
 
 //use external routes
+app.use('/', admin);
 app.use('/admin', admin);
 app.use('/places', places);
 app.use('/contact', contacts);

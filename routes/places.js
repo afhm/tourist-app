@@ -12,7 +12,33 @@ var {
 require('../models/places');
 var Place = mongoose.model('places');
 
-// admin login route
+// get all places route
+router.get('/allPlaces', (req, res) => {
+  if (req.query.search) {
+    const regex = new RegExp(escapeRegex(req.query.search), 'gi');
+    Place.find({title:regex})
+      .then(places => {
+        res.render('index', {
+          places: places
+        });
+      });
+
+  } else {
+    Place.find({})
+      .then(places => {
+        res.render('index', {
+          places: places
+        });
+      });
+  }
+});
+
+
+
+
+
+
+// places route
 router.get('/', ensureAuthenticated, (req, res) => {
   Place.find({})
     .then(places => {
@@ -24,26 +50,6 @@ router.get('/', ensureAuthenticated, (req, res) => {
 });
 
 
-// get all places route
-router.get('/allPlaces', (req, res) => {
-  if (req.query.search) {
-    const regex = new RegExp(escapeRegex(req.query.search), 'gi');
-    Place.find({title:regex})
-      .then(places => {
-        res.render('places/allplaces', {
-          places: places
-        });
-      });
-
-  } else {
-    Place.find({})
-      .then(places => {
-        res.render('places/allplaces', {
-          places: places
-        });
-      });
-  }
-});
 
 
 
