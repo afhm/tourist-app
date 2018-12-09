@@ -1,8 +1,15 @@
 
 <!-- Section: Article starts here -->
 <section class="article">
-	<div class="row">
+	<div class="card-image responsive-img">
+            <img src="{{place.imagePath}}">
+	</div>
+	<div class="section white">
 		<div class="container">
+<<<<<<< HEAD
+			<h2 class="header teal-text flow-text">{{place.title}}</h2>
+			<p class="grey-text text-darken-3 lighten-3">{{place.description}}</p>
+=======
 			            <div class="card-image">
                         <img src="{{place.imagePath}}">
                     </div>
@@ -10,45 +17,12 @@
 				<h3 class="flow-text">{{place.title}}</h3>
 				<p>{{place.description}}</p>
 			</div>
+>>>>>>> 9f65bec9e6348156c5e68bfe2a76ab1b7cf77c91
 		</div>
-
 	</div>
 </section>
 <!-- Section: Article ends here -->
 
-<!-- Section: comments starts here -->
-<section class="container comments-section">
-	<h2 class="flow-text">Comments</h2>
-	<div class="row">
-		<div class="col s11">
-			<h4 class="flow-text">Name</h4>
-			<p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven</p>
-		</div>
-		<div class="col s1 comment-number"><span class="grey-text">1<span></div>
-	</div>
-
-	<div class="row">
-		<div class="col s11">
-			<h4 class="flow-text">Name</h4>
-			<p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven</p>
-		</div>
-		<div class="col s1 comment-number"><span class="grey-text">2<span></div>
-	</div>
-
-	<form class="comment-area">
-		<div class="input-field">
-			<label for="name">Name</label>
-			<input type="text" id="name">
-		</div>
-		<div class="input-field">
-			<textarea class="materialize-textarea" placeholder="Comments..."></textarea>
-		</div>
-		<input type="submit" value="submit" class="btn">
-	</form>
-</section>
-<!-- Section: comments ends here -->
 
 
 <!-- Section: Follow starts here -->
@@ -85,3 +59,10 @@
 	<p class="flow-text"> TravelGo &copy; 2018</p>
 </footer>
 <!-- Section: Footer ends here -->
+
+<script type="text/javascript">
+	//parallax
+		$(document).ready(function(){
+		    $('.parallax').parallax();
+		 });
+</script>
