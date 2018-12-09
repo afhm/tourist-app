@@ -34,3 +34,10 @@ const ss = document.querySelectorAll('.scrollspy');
 M.ScrollSpy.init(ss, {
     fullWidth: true
 });
+
+//error
+$(document).ready(function() {
+	$('.card-alert > button').on('click', function(){
+		$(this).closest('div.card-alert').fadeOut('slow');
+	})
+})
