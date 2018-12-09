@@ -1,13 +1,15 @@
 <!--Section: slider starts here -->
-<div class="row"> {{#if hasErrors}}
-    <div><span class="new badge red">
+{{#if hasErrors}}
+<div class="card-alert card red lighten-5">
+    <div class="card-content red-text">
 
-            {{# each messages }}
-            <h3>{{this}}</h3>
-            {{/each}}
-        </span>
+        {{# each messages }}
+        <h3>{{this}}</h3>
+        {{/each}}
     </div>
-    {{/if}}</div>
+</div>
+{{/if}}
+
 <section class="slider">
     <ul class="slides">
         <li>
@@ -69,24 +71,24 @@
                 <div class="card-panel">
                     <i class="material-icons large teal-text">
                         room</i>
-                        <h4>Pick Where</h4>
-                        <p>Choose your location from where we have to pick you!</p>
+                    <h4>Pick Where</h4>
+                    <p>Choose your location from where we have to pick you!</p>
                 </div>
             </div>
             <div class="col s12 m4">
                 <div class="card-panel">
                     <i class="material-icons large teal-text">
                         directions_bike</i>
-                        <h4>Explore</h4>
-                        <p>Visit the most exciting and amazing places and get to know the world!</p>
+                    <h4>Explore</h4>
+                    <p>Visit the most exciting and amazing places and get to know the world!</p>
                 </div>
             </div>
             <div class="col s12 m4">
                 <div class="card-panel">
                     <i class="material-icons large teal-text">
                         directions_car </i>
-                        <h4>Travel cheap</h4>
-                        <p>Best place for travelling in tight budget!</p>
+                    <h4>Travel cheap</h4>
+                    <p>Best place for travelling in tight budget!</p>
                 </div>
             </div>
         </div>
@@ -106,8 +108,8 @@
                         <img src="{{imagePath}}">
                         <span class="card-title">{{title}}</span>
                     </div>
-                    <div class="card-content">
-                       {{description}}
+                    <div class="card-content truncate">
+                        {{description}}
                     </div>
                     <div class="card-action">
                         <a href="/places/indplace/{{id}}"><button class="btn right waves-effect waves-light">Read More</button></a>
@@ -153,7 +155,7 @@
             <div class="col s12 m6">
                 <div class="card-panel grey lighten-2">
                     <h5>Please fill out this form</h5>
-                
+
                     <form action="/contact" method="post" class="col s12">
                         <div class="input-field">
                             <input type="text" value="{{name}}" name="name" placeholder="Name">

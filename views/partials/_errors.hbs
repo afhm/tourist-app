@@ -1,12 +1,15 @@
 {{#if error}}
-<div><span class="badge red">{{error}}</span>
+<div class="card-alert card red lighten-5">
+    <div class="card-content red-text">
+        {{error}}
+    </div>
 </div>
-
 {{/if}}
 
-
 {{#each errors}}
-<div><span class="badge red">{{text}}</span>
+<div class="card-alert card red lighten-5">
+    <div class="card-content red-text">{{text}}
+    </div>
 </div>
 
 {{else}}
