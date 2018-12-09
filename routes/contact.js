@@ -7,6 +7,10 @@ const mongoose = require('mongoose');
 require('../models/contact');
 var Contact = mongoose.model('contacts');
 
+router.get('/index', (req, res) => {
+    res.render('index');
+  });
+
 
 //register form post
 router.post('/', (req, res) => {
@@ -32,7 +36,7 @@ router.post('/', (req, res) => {
             .then(contact => {
                 if (contact) {
                     req.flash('error_msg', 'email already sent');
-                     res.redirect('/')
+                     res.redirect('/contact/index')
                 } else {
 
                     const newContact = new Contact({
@@ -44,7 +48,7 @@ router.post('/', (req, res) => {
                     newContact.save()
                         .then(contact => {
                             req.flash('success_msg', 'Your message was succesfully sent');
-                            res.redirect('/');
+                            res.redirect('/contact/index');
                         })
                         .catch(err => {
                             console.log(err);

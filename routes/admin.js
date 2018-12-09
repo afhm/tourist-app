@@ -71,7 +71,7 @@ router.post('/register', (req, res) => {
               newAdmin.password = hash;
               newAdmin.save()
                 .then(admin => {
-                  req.flash('success_msg', 'admin is now registerd and can log in');
+                  req.flash('success_msg', 'admin is now registered and can log in');
                   res.redirect('/admin/register');
                 })
                 .catch(err => {
