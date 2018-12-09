@@ -93,7 +93,7 @@ router.post('/', ensureAuthenticated, (req, res) => {
       text: 'Please add title'
     });
   }
-  if (!req.body.desc) {
+  if (!req.body.description) {
     errors.push({
       text: 'Please add description'
     });
@@ -103,7 +103,7 @@ router.post('/', ensureAuthenticated, (req, res) => {
     res.render('places/add', {
       errors: errors,
       title: req.body.title,
-      description: req.body.desc,
+      description: req.body.description,
       imagePath: req.body.imagePath
     });
 
