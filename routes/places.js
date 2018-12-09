@@ -103,7 +103,7 @@ router.post('/', ensureAuthenticated, (req, res) => {
     res.render('places/add', {
       errors: errors,
       title: req.body.title,
-      desc: req.body.desc,
+      description: req.body.desc,
       imagePath: req.body.imagePath
     });
 

@@ -19,6 +19,9 @@ var admin = require('./routes/admin');
 var contacts = require('./routes/contact');
 var adminprofile = require('./routes/adminprofile');
 
+//DB config
+const db =require('./config/database');
+
 //passport config
 
 require('./config/passport')(passport);
@@ -84,7 +87,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // connect to mongoose
-mongoose.connect('mongodb://localhost:27017/tourist', {
+mongoose.connect(db.mongoURI, {
     useNewUrlParser: true
   })
   .then(() => console.log("MongoDb connected"))

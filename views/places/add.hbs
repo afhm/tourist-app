@@ -8,17 +8,18 @@
 <div class="row">
     <form action="/places" method="post" class="col s12">
         <div class="row">
+            <center><h4>Admin Add locations</h4></center>
             <div class="input-field col s6">
                     <input name="title" id="input_text" type="text" data-length="10" required>
-                <label for="input_text">Location Description</label>
+                <label for="input_text">Location title</label>
             </div>
             <div class="input-field col s6">
-                <input name="desc" id="input_text" type="text" data-length="10" required>
-                <label for="input_text">Location image url</label>
+                <input name="description" id="input_text" type="text" data-length="10" required>
+                <label for="input_text">Location Description</label>
             </div>
             <div class="input-field col s6">
                 <input name="imagePath" id="input_text" type="text" data-length="10" required>
-                <label for="input_text">Location Description</label>
+                <label for="input_text">Image url</label>
             </div>
         </div>
         <button class="btn waves-effect waves-light" type="submit" name="action">Submit
