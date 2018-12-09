@@ -14,7 +14,7 @@ router.post('/', (req, res) => {
 
     if (req.body.phone.length < 10) {
         errors.push({
-            text: 'number not appropriate'
+            text: 'error submitting form'
         });
     }
     if (errors.length > 0) {
