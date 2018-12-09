@@ -110,7 +110,7 @@ router.post('/', ensureAuthenticated, (req, res) => {
   } else {
     const newUser = {
       title: req.body.title,
-      description: req.body.desc,
+      description: req.body.description,
       imagePath: req.body.imagePath
     }
     new Place(newUser)
