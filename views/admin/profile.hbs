@@ -1,0 +1,36 @@
+<!-- Section: Popular places starts here-->
+<section id="popular" class="section section-popular scrollspy">
+    <div class="container">
+        <div class="row">
+            <h4 class="center"><span class="teal-text">Customer</span> details</h4>
+            {{#each contacts}}
+            <div class="col s12 m4">
+                <div class="card">
+                    <span class="card-title">{{name}}</span>
+                </div>
+                <div class="card-content">
+                    {{email}}
+                </div>
+                <div class="card-content">
+
+                    {{phone}}
+
+                </div>
+                <div class="card-content">
+
+                    {{message}}
+
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <p> no contacts</p>
+        {{/each}}
+
+
+    </div>
+
+
+    </div>
+</section>
+<!-- Section: Popular places ends here-->
