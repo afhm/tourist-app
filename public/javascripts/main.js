@@ -22,6 +22,7 @@ M.Autocomplete.init(ac, {
 		"Kapu": null,
 		"Malpe": null,
 		"Mangaladevi": null,
+		"Sultan Battery" : null
 	}
 });
 
