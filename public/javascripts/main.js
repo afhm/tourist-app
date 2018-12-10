@@ -41,3 +41,9 @@ $(document).ready(function() {
 		$(this).closest('div.card-alert').fadeOut('slow');
 	})
 })
+
+//parallax
+document.addEventListener('DOMContentLoaded', function() {
+    const elems = document.querySelectorAll('.parallax');
+    M.Parallax.init(elems, {});
+  });
