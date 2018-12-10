@@ -85,7 +85,7 @@ router.get('/edit/:id', ensureAuthenticated, (req, res) => {
 
 });
 
-
+//add location post
 router.post('/', ensureAuthenticated, (req, res) => {
   let errors = [];
   if (!req.body.title) {

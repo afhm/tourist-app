@@ -1,18 +1,15 @@
-// var createError = require('http-errors');
 var express = require('express');
 var exphbs = require('express-handlebars');
 var methodOverride = require('method-override');
 var flash = require('connect-flash');
 var session = require('express-session');
-
-
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
-
 var path = require('path');
 var  passport = require('passport');
-
 var app = express();
+
+
 //load routes
 var places = require('./routes/places');
 var admin = require('./routes/admin');
@@ -23,14 +20,7 @@ var adminprofile = require('./routes/adminprofile');
 const db =require('./config/database');
 
 //passport config
-
 require('./config/passport')(passport);
-
-
-
-
-
-
 
 // view engine setup
 app.engine('.hbs', exphbs({
@@ -38,7 +28,6 @@ app.engine('.hbs', exphbs({
   extname: '.hbs'
 }));
 app.set('view engine', '.hbs');
-
 
 // add body parser middle ware
 // parse application/x-www-form-urlencoded
@@ -60,7 +49,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-
+//flash error message middleware
 app.use(flash());
 
 //global variables
@@ -76,11 +65,6 @@ app.use((req,res,next) => {
 app.get('/', (req, res) => {
   res.redirect('places/allplaces');
 });
-
-// app.use(express.json());
-// app.use(express.urlencoded({
-//   extended: false
-// }));
 
 //for static assets public folder
 app.use(express.static(path.join(__dirname, 'public')));
@@ -100,25 +84,5 @@ app.use('/admin', admin);
 app.use('/places', places);
 app.use('/contact', contacts);
 app.use('/adminprofile', adminprofile);
-
-// // catch 404 and forward to error handler
-// app.use(function (req, res, next) {
-//   next(createError(404));
-// });
-
-
-
-
-
-// // error handler
-// app.use(function (err, req, res, next) {
-//   // set locals, only providing error in development
-//   res.locals.message = err.message;
-//   res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-//   // render the error page
-//   res.status(err.status || 500);
-//   res.render('error');
-// });
 
 module.exports = app;
