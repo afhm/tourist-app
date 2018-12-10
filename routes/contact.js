@@ -18,7 +18,7 @@ router.post('/', (req, res) => {
 
     if (req.body.phone.length < 10) {
         errors.push({
-            text: 'error submitting form'
+            text: 'enter correct phone no format'
         });
     }
     if (errors.length > 0) {
