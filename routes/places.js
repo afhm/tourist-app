@@ -85,7 +85,7 @@ router.get('/edit/:id', ensureAuthenticated, (req, res) => {
 
 });
 
-
+//add location post
 router.post('/', ensureAuthenticated, (req, res) => {
   let errors = [];
   if (!req.body.title) {
@@ -122,13 +122,16 @@ router.post('/', ensureAuthenticated, (req, res) => {
 
   }
 });
+
+//edit location
 router.put('/:id', ensureAuthenticated, (req, res) => {
   Place.findOne({
       _id: req.params.id
     })
     .then(place => {
       place.title = req.body.title;
-      place.description = req.body.desc;
+      place.description = req.body.description,
+      imagePath: req.body.imagePath
       place.save()
         .then(place => {
           req.flash('success_msg', 'Location updated');
@@ -137,6 +140,7 @@ router.put('/:id', ensureAuthenticated, (req, res) => {
     });
 });
 
+//delete location
 router.delete('/:id', ensureAuthenticated, (req, res) => {
   Place.remove({
       _id: req.params.id

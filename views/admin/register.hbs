@@ -2,17 +2,6 @@
     <div class="container white z-depth-2">
 
         <div id="register" class="col s12">
-            {{#if hasErrors}}
-            <div><span class="new badge red">
-
-                    {{# each messages }}
-                    <p>{{this}}</p>
-                    {{/each}}
-                </span>
-            </div>
-            {{/if}}
-
-
             <form action="/admin/register" method="post" class="col s12">
                 <div class="form-container">
                     <h3 class="teal-text">Register</h3>

@@ -1,9 +1,21 @@
 {{#if success_msg}}
-<div><span class="badge green">{{ success_msg }}</span>
+<div class="card-alert card green lighten-5">
+    <div class="card-content green-text">
+        <strong>{{ success_msg }}</strong>
+    </div>
+    <button type="button" class="close green-text" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">×</span>
+    </button>
 </div>
 {{/if}}
 
 {{#if error_msg}}
-<div><span class="badge red">{{ error_msg }}</span>
+<div class="card-alert card red lighten-5">
+    <div class="card-content red-text">
+        <strong>{{ error_msg }}</strong>
+    </div>
+    <button type="button" class="close red-text" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">×</span>
+    </button>
 </div>
 {{/if}}
