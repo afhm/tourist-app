@@ -119,6 +119,93 @@
 </section>
 <!-- Section: Popular places ends here-->
 
+<!-- Section: Follow starts here -->
+<section class="section section-follow teal darken-2 white-text center">
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h4>Follow TravelGo</h4>
+                <p>Follow us on social media for special offers</p>
+                <a href="#" class="white-text">
+                    <i class="fab fa-facebook fa-4x"></i>
+                </a>
+                <a href="#" class="white-text">
+                    <i class="fab fa-twitter fa-4x"></i>
+                </a>
+                <a href="#" class="white-text">
+                    <i class="fab fa-linkedin fa-4x"></i>
+                </a>
+                <a href="#" class="white-text">
+                    <i class="fab fa-google-plus fa-4x"></i>
+                </a>
+                <a href="#" class="white-text">
+                    <i class="fab fa-pinterest fa-4x"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section: Follow ends here -->
+
+<!-- Section: Gallery starts here -->
+<section id="gallery" class="section section-gallery scrollspy">
+    <div class="container">
+        <h4 class="center">
+            <span class="teal-text">Photo</span>Gallery
+        </h4>
+        <!-- 1st row -->
+        <div class="row">
+            <div class="col s12 m3">
+                <img src="/images/2- chapel.jpg" class="materialboxed responsive-img">
+            </div>
+            <div class="col s12 m3">
+                <img src="/images/3-kapu.jpg" class="materialboxed responsive-img">
+            </div>
+            <div class="col s12 m3">
+                <img src="/images/4-kudroli.jpg" class="materialboxed responsive-img">
+            </div>
+            <div class="col s12 m3">
+                <img src="/images/5-malpe.jpg" class="materialboxed responsive-img">
+            </div>
+        </div>
+        <!-- 2nd row -->
+        <div class="row">
+                <div class="col s12 m3">
+                    <img src="/images/6-pilikula.jpg" class="materialboxed responsive-img">
+                </div>
+                <div class="col s12 m3">
+                    <img src="/images/7-tannirbavi.jpg" class="materialboxed responsive-img">
+                </div>
+                <div class="col s12 m3">
+                    <img src="/images/login.jpg" class="materialboxed responsive-img">
+                </div>
+                <div class="col s12 m3">
+                    <img src="/images/resort1.jpg" class="materialboxed responsive-img">
+                </div>
+            </div>
+            <!-- 3rd row -->
+            <div class="row">
+                <div class="col s12 m3">
+                    <img src="/images/resort2.jpg" class="materialboxed responsive-img">
+                </div>
+                <div class="col s12 m3">
+                    <img src="/images/resort3.jpg" class="materialboxed responsive-img">
+                </div>
+                <div class="col s12 m3">
+                    <img src="/images/8-touristimg.jpg" class="materialboxed responsive-img">
+                </div>
+                <div class="col s12 m3">
+                    <img src="/images/9-touristimg.jpg" class="materialboxed responsive-img">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</section>
+<!-- Section: Gallery ends here -->
+
+
 <!-- Seciton: Contact Area starts here -->
 <section id="contact" class="section section-contact scrollspy">
     <div class="container">
@@ -145,7 +232,7 @@
                 <div class="card-panel grey lighten-2">
                     <h5>Please fill out this form</h5>
 
-                    <form action="/contact" method="post" class="col s12">
+                    <form action="/contact" method="post">
                         <div class="input-field">
                             <input type="text" value="{{name}}" name="name" placeholder="Name">
                         </div>
@@ -156,7 +243,7 @@
                             <input type="text" name="phone" value="{{phone}}" placeholder="Phone">
                         </div>
                         <div class="input-field">
-                            <input value="" name="message" value="{{message}}" type="text" placeholder="Your query here">
+                            <textarea class="materialize-textarea" placeholder="Enter Message" value="" name="message" value="{{message}}" type="text"></textarea>
                         </div>
                         <input type="submit" value="submit" class="btn">
                     </form>
