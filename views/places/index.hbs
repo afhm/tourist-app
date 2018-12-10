@@ -1,9 +1,10 @@
 <!-- Section: Popular places starts here-->
 <section id="popular" class="section section-popular scrollspy">
     <div class="container">
+        {{#each places}}
         <div class="row">
             <h4 class="center"><span class="teal-text">Popular</span> Places</h4>
-            {{#each places}}
+            
             <div class="col s12 m4">
                 <div class="card">
                     <div class="card-image">
@@ -32,12 +33,12 @@
             </div>
             {{else}}
             <p> no places</p>
-            {{/each}}
+            
 
 
         </div>
 
-
+{{/each}}
     </div>
 </section>
 <!-- Section: Popular places ends here-->
