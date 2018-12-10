@@ -131,7 +131,7 @@ router.put('/:id', ensureAuthenticated, (req, res) => {
     .then(place => {
       place.title = req.body.title;
       place.description = req.body.description,
-      imagePath: req.body.imagePath
+      imagePath = req.body.imagePath;
       place.save()
         .then(place => {
           req.flash('success_msg', 'Location updated');
